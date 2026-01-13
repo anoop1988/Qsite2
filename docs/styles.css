@@ -1,0 +1,114 @@
+/* css styles */
+/* Container for top logos */
+.quarto-top-logos {
+    position: fixed;       /* stay on top */
+    top: 0;                /* top of page */
+    left: 0;
+    width: 100%;
+    height: 100px;         /* match navbar height */
+    z-index: 1050;         /* higher than navbar */
+    pointer-events: none;  /* allows clicks only on logos */
+}
+
+/* Logo images */
+.quarto-top-logos img {
+    height: 80px;          /* bigger logos */
+    pointer-events: auto;  /* make them clickable */
+}
+
+/* Position left logo */
+.logo-left {
+    position: absolute;
+    left: 15px;
+    top: 10px;             /* adjust vertical alignment */
+}
+
+/* Position right logo */
+.logo-right {
+    position: absolute;
+    right: 15px;
+    top: 10px;             /* adjust vertical alignment */
+}
+
+/* Navbar adjustments */
+.navbar, .navbar-expand-lg {
+    min-height: 80px;     /* taller navbar */
+    z-index: 1040;         /* below logos */
+}
+
+.navbar .nav-link {
+    line-height: 80px;    /* center links vertically */
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .navbar-nav:first-child {
+    margin-left: 140px;    /* create space for left logo */
+}
+
+.navbar .navbar-nav.ms-auto {
+    margin-right: 140px;   /* create space for right logo */
+}
+
+/* Push content below navbar */
+body {
+    padding-top: 120px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .navbar .navbar-nav:first-child,
+    .navbar .navbar-nav.ms-auto {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .quarto-top-logos img {
+        height: 50px;
+    }
+}
+
+.navbar .navbar-nav:first-child {
+    margin-left: 140px; /* space for left logo */
+}
+
+.navbar .navbar-nav.ms-auto {
+    margin-right: 140px; /* space for right logo */
+}
+
+/* Set default font color for the website */
+body {
+    color: #000000;   /* black text */
+}
+
+/* Optional: make headings black too */
+h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+}
+
+
+.navbar .nav-link {
+    color: #000000;      /* black navbar links */
+}
+
+.navbar .nav-link:hover {
+    color: #0077cc;      /* optional: blue on hover */
+}
+
+/* Footer background color */
+footer, .footer {
+    background-color: #f0f0f0;  /* light gray background */
+    color: #000000;             /* text color black */
+    padding: 20px;              /* spacing inside footer */
+    text-align: center;          /* center text */
+}
+
+/* Footer links */
+footer a, .footer a {
+    color: #0077cc;             /* link color inside footer */
+}
+
+footer a:hover, .footer a:hover {
+    color: #000000;             /* link hover color */
+}
+

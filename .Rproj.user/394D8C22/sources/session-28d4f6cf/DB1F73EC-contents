@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    # You can keep a standard navbar here if you want
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - text: "Contact"
+        href: contact.qmd
+  page-footer:
+    left: |
+      The project belongs to the <a href="https://combatdengue.hemsida.eu/">COMBAT project</a>.
+    right: |
+      <a href="https://ki.se/en/research/research-areas-centres-and-networks/research-groups/the-systems-virology-lab-ujjwal-neogi">The Systems Virology Lab</a>.
+
+format:
+  html:
+    theme:
+      - spacelab
+    toc: true           # Enable table of contents
+    toc-location: right   # Options: "left", "right", "top"
+    toc-depth: 3  
+    # Include custom CSS for logos
+    css: styles.css
+    # Include custom HTML at the top of the page
+    include-in-header: includes/header.html

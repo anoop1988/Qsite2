@@ -1,0 +1,30 @@
+---
+title: "Q_web"
+---
+
+## Project Summary {.unnumbered}
+
+This project involved the reanalysis of a publicly available single-cell RNA sequencing (scRNA-seq) dataset generated from peripheral blood mononuclear cells (PBMCs) of dengue virus-infected human subjects. While the original study focused on immune profiling and disease severity, our objective was to revisit this dataset with a new perspective: to investigate the metabolic reprogramming of host cells induced by dengue virus infection.
+
+After downloading and curating the raw sequencing data (FASTQ format or processed matrices), we applied a standardized analysis pipeline using tools such as Cell Ranger, Seurat, and DESeq2 in R, alongside alignment and quantification tools like STAR on a Linux-based environment. Our initial steps included:
+
+-   Quality control and filtering of low-quality cells
+-   Normalization and scaling of expression data
+-   Dimensionality reduction (PCA, UMAP)
+-   Clustering and cell type annotation
+-   Differential gene expression analysis between infected and healthy/control groups
+
+### test
+
+Once confident in cell-type identity and group classification, we shifted our focus toward host metabolic pathways. Using curated gene sets and public databases such as KEGG, Reactome, and Recon3D, we extracted metabolic gene expression profiles across different immune cell types.
+
+To move beyond gene-level analysis, we employed constraint-based modeling approaches such as Flux Balance Analysis (FBA) to simulate and quantify changes in cellular metabolism. Using context-specific genome-scale metabolic models (GEMs), we mapped transcriptomic signals to metabolic reaction constraints, allowing us to:
+
+-   Predict flux changes in central carbon metabolism (glycolysis, TCA cycle)
+-   Identify pathways selectively up- or down-regulated in monocytes, T cells, and B cells
+-   Infer potential metabolic bottlenecks or rerouting induced by the virus
+-   Compare metabolic phenotypes between acute and convalescent phases of infection
+
+Our results revealed significant rewiring of metabolic programs in specific immune cell populations, suggesting that dengue virus may exploit host metabolic plasticity to support its replication or modulate immune responses. For instance, enhanced glycolytic activity and suppressed oxidative phosphorylation were observed in certain pro-inflammatory monocyte clusters.
+
+This integrative approach, combining scRNA-seq with systems biology and metabolic modeling, offers a high-resolution view of how host metabolism responds dynamically to viral infection. Such insights may guide future research into host-directed therapies targeting metabolic pathways during dengue and other viral diseases.
